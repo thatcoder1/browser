@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Browser</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+    
+    body {
+      text-align: center;
+      font-family: Robotosans-serif;
+    }
+
+    input {
+      height: 10%;
+      border: 1px solid black;
+      border-radius: 5px;
+      width: 75%;
+    }
+
+    .material-symbols-outlined {
+      font-variation-settings:
+      'FILL' 0,
+      'wght' 400,
+      'GRAD' 0,
+      'opsz' 10;
+    }
+
+    #searchbutton {
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Browser Name</h1>
+  <h2>Catchy slogan</h2>
+  <input type="text" id="search">  <span class="material-symbols-outlined" id="searchbutton">
+  search
+  </span></input>
+  <script>
+    var s = document.getElementById("search")
+    document.addEventListener("keyup", function(event) {
+      if (event.keyCode === 13) {
+        window.open("https://browser.thatcoder1.repl.co/search/" + encodeURIComponent(s.value))
+      }
+    })
+  </script>
+</body>
+</html>
